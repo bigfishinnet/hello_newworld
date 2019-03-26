@@ -1,0 +1,19 @@
+upstream backend  {
+<% @backend_servers.each do |server| -%>
+ server <%= server -%>:9000;
+<%-end-%>
+}
+
+server {
+  listen 80;
+
+  root /usr/share/nginx/html;
+  index index.php;
+
+  server_name $hostname;
+
+  location / {
+    proxy_pass  http://backend;
+  }
+
+}

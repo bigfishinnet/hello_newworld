@@ -1,0 +1,21 @@
+---
+
+webapp-1:
+  hostname: webapp-1.test.com
+  ip: 192.168.1.8
+  nodetype: 'webapp'
+
+webapp-2:
+  hostname: webapp-2.test.com
+  ip: 192.168.1.6
+  nodetype: 'webapp'
+
+loadbalancer:
+  hostname: loadbalancer.test.com
+  ip: 192.168.1.4
+  nodetype: 'loadbalancer'
+
+jenkins:
+  hostname: jenkins.test.com
+  ip: 192.168.1.10
+  nodetype: 'jenkins'
